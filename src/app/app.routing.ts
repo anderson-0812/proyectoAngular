@@ -1,4 +1,3 @@
-import { ErrorComponent } from './componets/error/error.component';
 
 // importamos los modulpos del routin de angular
 
@@ -13,6 +12,7 @@ import {BlogComponent } from './componets/blog/blog.component';
 import {FormularioComponent } from './componets/formulario/formulario.component';
 import {PeliculasComponent } from './componets/peliculas/peliculas.component';
 import {PaginaComponent } from './componets/pagina/pagina.component';
+import { ErrorComponent } from './componets/error/error.component';
 
 // Array de rutas
 const appRoutes: Routes = [
