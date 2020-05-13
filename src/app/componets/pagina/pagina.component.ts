@@ -27,4 +27,9 @@ export class PaginaComponent implements OnInit {
     });
   }
 
+  redireccion(){
+    // navigate para direccioanr con o sin parametros los parametros son anderson / jimenez 
+    this._router.navigate(['/pagina-de-prueba', 'Anderson', 'Jimenez']);
+  }
+
 }
