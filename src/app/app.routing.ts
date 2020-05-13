@@ -1,3 +1,4 @@
+import { ErrorComponent } from './componets/error/error.component';
 
 // importamos los modulpos del routin de angular
 
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     {path: 'formulario', component: FormularioComponent},
     {path: 'peliculas', component: PeliculasComponent},
     {path: 'pagina-de-prueba', component: PaginaComponent},
+    {path: '**', component: ErrorComponent},
 ];
 
 // exportar el modulod e rutas
