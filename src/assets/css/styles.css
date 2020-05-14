@@ -228,6 +228,24 @@ body {
     font-size: 17px;
 }
 
+.year-green {
+    display: block;
+    background: green;
+    color: white;
+    padding: 5px;
+    width: 121px;
+    text-align: center;
+}
+
+.year-red {
+    display: block;
+    background: red;
+    color: white;
+    padding: 5px;
+    width: 121px;
+    text-align: center;
+}
+
 input[type="text"],
 textarea{
     width: 100%;
