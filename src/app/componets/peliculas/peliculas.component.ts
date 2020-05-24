@@ -1,4 +1,5 @@
 import { Component, OnInit, DoCheck, OnDestroy} from '@angular/core';
+import { Pelicula } from './../../models/pelicula';
 
 @Component({
   selector: 'app-peliculas',
@@ -8,17 +9,21 @@ import { Component, OnInit, DoCheck, OnDestroy} from '@angular/core';
 export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
 
   public titulo: string;
-  public peliculas: Array<any>;
+  // public peliculas: Array<Pelicula>;
+  public peliculas: Pelicula[];
 
   constructor() {
-    this.titulo = "Componente peliculas ";
+    this.titulo = 'Componente peliculas ';
     // el constructor solo inicializa ptropiedades de clase  No se mete logica
     console.log('Constructor de hook lanzado');
     this.peliculas =  [
-      {year:2020,title: 'Spiderman 4', image: 'https://media.gettyimages.com/photos/interactive-spiderman-2-attraction-is-unveiled-at-madame-tussauds-on-picture-id51071273?s=612x612'},
-      {year:2012,title: 'Los vengadores', image: 'https://dam.smashmexico.com.mx/wp-content/uploads/2018/04/24160210/lo-que-debes-recordar-avengers-infinity-war.jpg'},
-      {year:2018,title: 'Batman vs Superman', image: 'https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2016/03/23/160323133140_batman_vs_superman_304x171_dcmovies_nocredit.jpg'},
-      {year:2008,title: 'Ironman', image: 'https://www.cinemascomics.com/wp-content/uploads/2019/07/iron-man-no-muerto.jpg'},
+      // tslint:disable-next-line:max-line-length
+      new Pelicula('Spiderman 4', 2020, 'https://media.gettyimages.com/photos/interactive-spiderman-2-attraction-is-unveiled-at-madame-tussauds-on-picture-id51071273?s=612x612'),
+      // tslint:disable-next-line:max-line-length
+      new Pelicula('Los vengadores', 2020, 'https://dam.smashmexico.com.mx/wp-content/uploads/2018/04/24160210/lo-que-debes-recordar-avengers-infinity-war.jpg'),
+      // tslint:disable-next-line:max-line-length
+      new Pelicula('Batman vs Superman', 2012, 'https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2016/03/23/160323133140_batman_vs_superman_304x171_dcmovies_nocredit.jpg'),
+      new Pelicula('Ironman', 2008, 'https://www.cinemascomics.com/wp-content/uploads/2019/07/iron-man-no-muerto.jpg'),
     ];
     
   }
