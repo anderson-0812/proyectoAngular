@@ -2,6 +2,7 @@
 <!-- va con comilla simpre para identificar que es un string -->
 <app-slider
 [nombre] = "'PELICULAS'"
+[size] = "'small'"
 ></app-slider>
 
 <div class="center">
@@ -32,32 +33,12 @@
         <h3>Listado de peliculas </h3>
         <!--Listado articulos-->
         <div id="articles" *ngIf="peliculas">
-            <article class="article-item" *ngFor="let pelicula of peliculas; let i = index;">
-                <div class="image-wrap">
-                    <img src="{{pelicula.image}}" alt="{{pelicula.title}}" />
-                </div>
-        
-                <h2>{{ i }} {{pelicula.title}}</h2>
-                <span class="date">
-                    Hace 5 minutos
-                </span>
-        
-                <!-- <span class="year" [style.background]= "pelicula.year > 2016 ? 'green' : 'blue' "> -->
-                <!-- <span class="year"  [class.year-green]= "pelicula.year > 2016" [class.year-red]= "pelicula.year < 2016 "> -->
-                <span class="year"  
-                    [ngClass]= "{
-                        'year-green': pelicula.year > 2016,
-                        'year-red': pelicula.year < 2016
-                    }"
-                >
-                    {{pelicula.year}}
-                </span>
-        
-                <div class="clearfix"></div>
-            </article>
-        
-            <!--AÑADIR ARTICULOS VIA JS-->
-        
+            <!--AÑADIR ARTICULOS VIA JS llamando al componente pelicula meintras recorremos la lista -->
+            <div *ngFor="let pelicula of peliculas; let i = index;">
+                <app-pelicula
+                    [pelicula]="pelicula"
+                ></app-pelicula>
+            </div>
         </div>
   </section>
   <app-sidebar></app-sidebar>
