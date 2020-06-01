@@ -7,7 +7,16 @@
 
 <div class="center">
     <section id="content">
-        <h2 class="subheader"> Peliculas</h2>
+        <div id="favorita" *ngIf="favorita">
+            <h2 class="subheader">Pelicula Favorita</h2>
+            <h4>
+                {{ favorita.title }}
+            </h4>
+            <h4>
+                {{ favorita.year }}
+            </h4>
+        </div>
+        <!-- <h2 class="subheader"> Peliculas</h2>
         
         <h3>{{ titulo }}</h3>
         <button (click)= "cambiarTitulo();">Pulsar</button>
@@ -24,7 +33,7 @@
         </div>
         <div *ngIf="peliculas.length > 3">
             hay muchas peliculas
-        </div>
+        </div> -->
         
         <h3>Numero de peliculas</h3>
         {{ peliculas.length}}
@@ -35,8 +44,11 @@
         <div id="articles" *ngIf="peliculas">
             <!--AÑADIR ARTICULOS VIA JS llamando al componente pelicula meintras recorremos la lista -->
             <div *ngFor="let pelicula of peliculas; let i = index;">
+                <!-- llamo a mi evento definido en el componente hijo y le digo q llame a una funcion  -->
+                <!-- del mi componente padre en este caso mostrarFavorita -->
                 <app-pelicula
                     [pelicula]="pelicula"
+                    (marcarFavorita) = "mostrarFavorita($event)"
                 ></app-pelicula>
             </div>
         </div>

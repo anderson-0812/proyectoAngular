@@ -11,6 +11,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
   public titulo: string;
   // public peliculas: Array<Pelicula>;
   public peliculas: Pelicula[];
+  public favorita: Pelicula;
 
   constructor() {
     this.titulo = 'Componente peliculas ';
@@ -25,24 +26,31 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
       new Pelicula('Batman vs Superman', 2012, 'https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2016/03/23/160323133140_batman_vs_superman_304x171_dcmovies_nocredit.jpg'),
       new Pelicula('Ironman', 2008, 'https://www.cinemascomics.com/wp-content/uploads/2019/07/iron-man-no-muerto.jpg'),
     ];
-    
+
   }
-  
+
   ngOnInit() {
     // aqui se puedemeter logica
     console.log('OnInit de hook lanzado');
   }
-  
-  ngDoCheck(){
+
+  ngDoCheck() {
     console.log('DoCheck lanzado');
 
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('El componente se va a eliminar de la ejecucion');
   }
 
-  cambiarTitulo(){
-    this.titulo = "El titulo a sido cambiado ";
+  cambiarTitulo() {
+    this.titulo = 'El titulo a sido cambiado ';
+  }
+
+  // evendo usado con utput
+  mostrarFavorita(event) {
+    console.log('entro al evento');
+    console.log(event);
+    this.favorita = event.pelicula;
   }
 }
