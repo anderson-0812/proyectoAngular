@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public titulo: string;
+  public homtext: string;
   constructor() {
     this.titulo = "Ultimos articulos";
+    this.homtext = 'Bienvenidos a aprendiendo angular con Anderson Jimenez';
    }
 
   ngOnInit() {
