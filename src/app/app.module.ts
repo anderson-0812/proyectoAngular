@@ -17,6 +17,7 @@ import { FormularioComponent } from './componets/formulario/formulario.component
 import { PaginaComponent } from './componets/pagina/pagina.component';
 import { ErrorComponent } from './componets/error/error.component';
 import { PeliculaComponent } from './componets/pelicula/pelicula.component';
+import { EsParPipe } from './pipes/espar.pupes';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PeliculaComponent } from './componets/pelicula/pelicula.component';
     FormularioComponent,
     PaginaComponent,
     ErrorComponent,
-    PeliculaComponent
+    PeliculaComponent,
+    EsParPipe
   ],
   imports: [
     BrowserModule,
