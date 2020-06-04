@@ -12,6 +12,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
   // public peliculas: Array<Pelicula>;
   public peliculas: Pelicula[];
   public favorita: Pelicula;
+  public fecha: any;
 
   constructor() {
     this.titulo = 'Componente peliculas ';
@@ -26,7 +27,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
       new Pelicula('Batman vs Superman', 2012, 'https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2016/03/23/160323133140_batman_vs_superman_304x171_dcmovies_nocredit.jpg'),
       new Pelicula('Ironman', 2008, 'https://www.cinemascomics.com/wp-content/uploads/2019/07/iron-man-no-muerto.jpg'),
     ];
-
+    this.fecha = new Date(2020, 8, 12);
   }
 
   ngOnInit() {
