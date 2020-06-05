@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+// modulod eformularios 
+import {FormsModule} from '@angular/forms';
 
 // importo mis componentes
 import { Micomponente } from './componets/miComponente/mi-componente.component';
@@ -38,7 +40,8 @@ import { EsParPipe } from './pipes/espar.pupes';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
