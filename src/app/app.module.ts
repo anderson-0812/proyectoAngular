@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// modulod eformularios 
+// modulod eformularios
 import {FormsModule} from '@angular/forms';
 
 // importo mis componentes
@@ -20,6 +20,9 @@ import { PaginaComponent } from './componets/pagina/pagina.component';
 import { ErrorComponent } from './componets/error/error.component';
 import { PeliculaComponent } from './componets/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/espar.pupes';
+
+// peticiones ajax
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { EsParPipe } from './pipes/espar.pupes';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

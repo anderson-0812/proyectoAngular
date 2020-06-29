@@ -57,6 +57,12 @@
           <input type="submit" value="Enviar" class="btn btn-success" [disabled]="userForm.invalid" />
 
      </form>
+
+     <h2 class="subheader"> Eventos </h2>
+     <button (click) = "hasdadoClick();">Da clic </button>
+     <input type="text" [(ngModel)]="campo" (blur)="haSalido();" />
+     <input type="text" [(ngModel)]="campo" (keyup.enter)="hasdadoEnter();" />
+     {{ campo }}
   </section>
   <app-sidebar></app-sidebar>
 </div>
